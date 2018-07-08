@@ -1,0 +1,45 @@
+span.navbar-brand {
+    color: khaki;
+}
+.store-container {
+    border: 1px solid #777;
+    box-shadow: 3px 3px 5px #222;
+    -webkit-box-shadow: 3px 3px 5px #222;
+    -moz-box-shadow: 3px 3px 5px #222;
+    -moz-box-shadow: 3px 3px 5px #222;
+    -o-box-shadow: 3px 3px 5px #222;
+}
+.store-image {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+.name,
+.store-image,
+.price,
+input[type="submit"],
+select[name="qty"],
+.item {
+    display: inline-block !important;
+}
+.item {
+    width: 100%;
+}
+.price {
+    position: relative;
+    left: 400px;
+    bottom: 80px;
+}
+select[name="qty"] {
+    width: 10%;
+    position: relative;
+    left: 530px;
+    bottom: 150px;
+}
+input[type="submit"] {
+    position: relative;
+    left: 700px;
+    bottom: 200px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Home {% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'store/css/app.css' %}">
+</head>
+<body>
+    
+
+    <!-- As a heading -->
+    <nav class="navbar bg-dark p-2">
+        <span class="navbar-brand mb-0 h1">Amadon</span>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-1 mt-5">
+                <div class="store-container">
+                    <div class="col-lg-12">
+                        <div class="item">
+                            <h5 class="name">Nike Dri Fit Red</h5>
+                            <img class="store-image" src="{% static 'store/img/dri-fit-red-hoodie.png' %}" alt="Red Hoodie">
+                            <form action="/amadon/buy" method="POST">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <input type="hidden" name="id" value="1">
+                                    <p class="lead price">$29.99</p>
+                                </div>
+                                <div class="form-group">
+                                    <select name="qty" class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <input type="submit" value="Buy" class="btn btn-success btn-lg">
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-lg-12">
+                            <div class="item">
+                                <h5 class="name">Nike Dri Fit Black/Grey</h5>
+                                <img class="store-image" src="{% static 'store/img/dri-fit-black-long.png' %}" alt="Black Hoodie">
+                                <form action="/amadon/buy" method="POST">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="hidden" name="id" value="2">
+                                        <p class="lead price">$49.99</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="qty" class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit" value="Buy" class="btn btn-success btn-lg">
+                                </form>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="col-lg-12">
+                                <div class="item">
+                                    <h5 class="name">Nike Dri Fit Grey Zip</h5>
+                                    <img class="store-image" src="{% static 'store/img/grey-long.png' %}" alt="Grey Long">
+                                    <form action="/amadon/buy" method="POST">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <input type="hidden" name="id" value="3">
+                                            <p class="lead price">$59.99</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="qty" class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <input type="submit" value="Buy" class="btn btn-success btn-lg">
+                                    </form>
+                                </div>
+                            </div>
+                            <hr>
+                    <div class="col-lg-12">
+                            <div class="item">
+                                <h5 class="name">Nike Dri Fit Black Zip</h5>
+                                <img class="store-image" src="{% static 'store/img/dri-fit-all-black.jpg' %}" alt="Black Long">
+                                <form action="/amadon/buy" method="POST">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="hidden" name="id" value="4">
+                                        <p class="lead price">$49.99</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="qty" class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit" value="Buy" class="btn btn-success btn-lg">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

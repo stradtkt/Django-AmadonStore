@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Checkout {% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'store/css/app.css' %}">
+</head>
+<body>
+    
+
+    <!-- As a heading -->
+    <nav class="navbar bg-dark p-2">
+        <span class="navbar-brand mb-0 h1">Amadon</span>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-1">
+                <h1>Thank you for your business!</h1>
+                <p class="lead">We charged your credit card for {{request.session.total}}</p>
+                <p class="lead">You have ordered {{request.session.total_items}} so far and spent {{request.session.total_cost}} with Amadon.com</p>
+                <a href="/amadon/back" class="btn btn-info">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
